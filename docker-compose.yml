@@ -3,7 +3,7 @@ version: '3'
 services:
   backend:
     container_name: AdsAnalysis
-    build: ./Advertisement-Analysis-backend-Blocked/
+    build: ./Advertisement-Analysis-backend/
     ports:
       - 5000:5000
     networks:
