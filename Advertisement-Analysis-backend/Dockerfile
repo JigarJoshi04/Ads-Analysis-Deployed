@@ -15,8 +15,8 @@ RUN pip install -r requirements.txt
 
 # copy project
 COPY . .
-RUN chmod g+x ./guinicorn.sh
+RUN chmod g+x ./gunicorn.sh
 EXPOSE 5000
 
 #CMD ["python", "app.py" ]
-ENTRYPOINT ["./guinicorn.sh"]
+ENTRYPOINT ["./gunicorn.sh"]
