@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  backend:
+    container_name: AdsAnalysis
+    build: ./Advertisement-Analysis-backend-Blocked/
+    ports:
+      - 5000:5000
+    networks:
+      - my-network
+  nginx:
+    build: ./nginx-AdsAnalysis/
+    container_name: webserver
+    restart: unless-stopped
+    depends_on: 
+      - backend
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /home/ubuntu/certs:/etc/nginx/certs
+    networks:
+      - my-network
+networks:
+  my-network:
