@@ -30,6 +30,10 @@ class BeautyPredicter:
             return False
 
         self.data["gender"] = 1 if self.data["gender"] == "Male" else 0
+        self.data["education"] = (
+            1 if self.data["education"].lower() == "educated" else 0
+        )
+        self.data["cost"] = 1 if self.data["cost"].lower() == "premium" else 0
         return True
 
     def getMakeupPremium(self):
@@ -43,6 +47,7 @@ class BeautyPredicter:
                     self.data.get("income") // 1000,
                     self.data.get("gender"),
                     self.data.get("education"),
+                    self.data.get("cost"),
                 ]
             ).reshape(1, -1)
         )
@@ -65,6 +70,7 @@ class BeautyPredicter:
                     self.data.get("income") // 1000,
                     self.data.get("gender"),
                     self.data.get("education"),
+                    self.data.get("cost"),
                 ]
             ).reshape(1, -1)
         )
@@ -87,6 +93,7 @@ class BeautyPredicter:
                     self.data.get("income") // 1000,
                     self.data.get("gender"),
                     self.data.get("education"),
+                    self.data.get("cost"),
                 ]
             ).reshape(1, -1)
         )
@@ -109,6 +116,7 @@ class BeautyPredicter:
                     self.data.get("income") // 1000,
                     self.data.get("gender"),
                     self.data.get("education"),
+                    self.data.get("cost"),
                 ]
             ).reshape(1, -1)
         )
@@ -131,6 +139,7 @@ class BeautyPredicter:
                     self.data.get("income") // 1000,
                     self.data.get("gender"),
                     self.data.get("education"),
+                    self.data.get("cost"),
                 ]
             ).reshape(1, -1)
         )
@@ -153,6 +162,7 @@ class BeautyPredicter:
                     self.data.get("income") // 1000,
                     self.data.get("gender"),
                     self.data.get("education"),
+                    self.data.get("cost"),
                 ]
             ).reshape(1, -1)
         )
