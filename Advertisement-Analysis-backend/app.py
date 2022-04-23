@@ -43,6 +43,10 @@ def tweakPad():
         data["binary"] = "Yes" if data["binary"] == "1" else "No"
         data["gender"] = "Male" if data["gender"] == 1 else "Female"
         data["education"] = "Educated" if data["education"] == 1 else "Uneducated"
+        try:
+            data["cost"] = "Premium" if data["cost"] == 1 else "Mid-range"
+        except Exception as e:
+            pass
     except Exception as e:
         print("Exception occurred :  ", e)
 
