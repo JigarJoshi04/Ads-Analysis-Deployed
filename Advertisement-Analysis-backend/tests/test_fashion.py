@@ -1,16 +1,16 @@
-from utilities.automobile import automobile_utilities
+from utilities.fashion import fashion_utilities
 
 
 def test_menswear_premium():
     data = {
         "age": 40,
         "gender": "Male",
-        "income": "50000",
-        "product": "car",
+        "income": "90000",
+        "product": "menswear",
         "cost": "premium",
-        "category": "automobile",
+        "category": "fashion",
     }
-    prediction = automobile_utilities(data)
+    prediction = fashion_utilities(data)
 
     assert 1 == int(prediction["binary"])
 
@@ -20,24 +20,24 @@ def test_menswear_premium_negative():
         "age": 10,
         "gender": "Female",
         "income": "1",
-        "product": "car",
+        "product": "menswear",
         "cost": "premium",
-        "category": "automobile",
+        "category": "fashion",
     }
-    prediction = automobile_utilities(data)
-    assert float(prediction["binary"]) < 90
+    prediction = fashion_utilities(data)
+    assert int(prediction["binary"]) < 90
 
 
 def test_menswear_midrange():
     data = {
         "age": 40,
         "gender": "Male",
-        "income": "50000",
-        "product": "car",
+        "income": "90000",
+        "product": "menswear",
         "cost": "midrange",
-        "category": "automobile",
+        "category": "fashion",
     }
-    prediction = automobile_utilities(data)
+    prediction = fashion_utilities(data)
 
     assert 1 == int(prediction["binary"])
 
@@ -47,24 +47,24 @@ def test_menswear_midrange_negative():
         "age": 10,
         "gender": "Female",
         "income": "1",
-        "product": "car",
+        "product": "menswear",
         "cost": "midrange",
-        "category": "automobile",
+        "category": "fashion",
     }
-    prediction = automobile_utilities(data)
-    assert float(prediction["binary"]) < 90
+    prediction = fashion_utilities(data)
+    assert int(prediction["binary"]) < 90
 
 
 def test_womenswear_premium():
     data = {
         "age": 40,
         "gender": "Male",
-        "income": "50000",
-        "product": "car",
+        "income": "90000",
+        "product": "womenswear",
         "cost": "premium",
-        "category": "automobile",
+        "category": "fashion",
     }
-    prediction = automobile_utilities(data)
+    prediction = fashion_utilities(data)
 
     assert 1 == int(prediction["binary"])
 
@@ -74,24 +74,24 @@ def test_womenswear_premium_negative():
         "age": 10,
         "gender": "Female",
         "income": "1",
-        "product": "car",
+        "product": "womenswear",
         "cost": "premium",
-        "category": "automobile",
+        "category": "fashion",
     }
-    prediction = automobile_utilities(data)
-    assert float(prediction["binary"]) < 90
+    prediction = fashion_utilities(data)
+    assert int(prediction["binary"]) < 90
 
 
 def test_womenswear_midrange():
     data = {
         "age": 40,
         "gender": "Male",
-        "income": "50000",
-        "product": "car",
+        "income": "90000",
+        "product": "womenswear",
         "cost": "midrange",
-        "category": "automobile",
+        "category": "fashion",
     }
-    prediction = automobile_utilities(data)
+    prediction = fashion_utilities(data)
 
     assert 1 == int(prediction["binary"])
 
@@ -101,24 +101,24 @@ def test_womenswear_midrange_negative():
         "age": 10,
         "gender": "Female",
         "income": "1",
-        "product": "car",
+        "product": "womenswear",
         "cost": "midrange",
-        "category": "automobile",
+        "category": "fashion",
     }
-    prediction = automobile_utilities(data)
-    assert float(prediction["binary"]) < 90
+    prediction = fashion_utilities(data)
+    assert int(prediction["binary"]) < 90
 
 
 def test_kidswear_premium():
     data = {
         "age": 40,
         "gender": "Male",
-        "income": "50000",
-        "product": "car",
+        "income": "90000",
+        "product": "kidswear",
         "cost": "premium",
-        "category": "automobile",
+        "category": "fashion",
     }
-    prediction = automobile_utilities(data)
+    prediction = fashion_utilities(data)
 
     assert 1 == int(prediction["binary"])
 
@@ -128,24 +128,24 @@ def test_kidswear_premium_negative():
         "age": 10,
         "gender": "Female",
         "income": "1",
-        "product": "car",
+        "product": "kidswear",
         "cost": "premium",
-        "category": "automobile",
+        "category": "fashion",
     }
-    prediction = automobile_utilities(data)
-    assert float(prediction["binary"]) < 90
+    prediction = fashion_utilities(data)
+    assert int(prediction["binary"]) < 90
 
 
 def test_kidswear_midrange():
     data = {
         "age": 40,
         "gender": "Male",
-        "income": "50000",
-        "product": "car",
+        "income": "90000",
+        "product": "kidswear",
         "cost": "midrange",
-        "category": "automobile",
+        "category": "fashion",
     }
-    prediction = automobile_utilities(data)
+    prediction = fashion_utilities(data)
 
     assert 1 == int(prediction["binary"])
 
@@ -155,9 +155,9 @@ def test_kidswear_midrange_negative():
         "age": 10,
         "gender": "Female",
         "income": "1",
-        "product": "car",
+        "product": "kidswear",
         "cost": "midrange",
-        "category": "automobile",
+        "category": "fashion",
     }
-    prediction = automobile_utilities(data)
-    assert float(prediction["binary"]) < 90
+    prediction = fashion_utilities(data)
+    assert int(prediction["binary"]) < 90
