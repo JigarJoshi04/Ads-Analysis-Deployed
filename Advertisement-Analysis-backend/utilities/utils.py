@@ -66,7 +66,7 @@ def ProfitCalculation(data):
 
     earnings = (
         impression * CTR * conversion_rate * product_price * product_margin
-    ) // (10**6)
+    ) // (10 ** 6)
     marketing_expense = int(data.get("marketingExpense"))
 
     return "Success" if earnings >= marketing_expense else "Failure"

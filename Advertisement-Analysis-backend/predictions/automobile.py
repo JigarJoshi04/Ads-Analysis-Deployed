@@ -34,13 +34,7 @@ class AutomobilePredicter:
             return 100.00
 
         scaled_data = vehicle_model_scaler.transform(
-            [
-                [
-                    self.data.get("gender"),
-                    self.data.get("age"),
-                    self.data.get("income"),
-                ]
-            ]
+            [[self.data.get("gender"), self.data.get("age"), self.data.get("income"),]]
         )
 
         prediction = {}
@@ -55,13 +49,7 @@ class AutomobilePredicter:
             return 100.00
 
         scaled_data = vehicle_model_scaler.transform(
-            [
-                [
-                    self.data.get("gender"),
-                    self.data.get("age"),
-                    self.data.get("income"),
-                ]
-            ]
+            [[self.data.get("gender"), self.data.get("age"), self.data.get("income"),]]
         )
 
         prediction = {}
@@ -77,13 +65,7 @@ class AutomobilePredicter:
             return 100.00
 
         scaled_data = bike_model_scaler.transform(
-            [
-                [
-                    self.data.get("gender"),
-                    self.data.get("age"),
-                    self.data.get("income"),
-                ]
-            ]
+            [[self.data.get("gender"), self.data.get("age"), self.data.get("income"),]]
         )
 
         prediction = {}
@@ -98,13 +80,7 @@ class AutomobilePredicter:
             return 100.00
 
         scaled_data = bike_model_scaler.transform(
-            [
-                [
-                    self.data.get("gender"),
-                    self.data.get("age"),
-                    self.data.get("income"),
-                ]
-            ]
+            [[self.data.get("gender"), self.data.get("age"), self.data.get("income"),]]
         )
 
         prediction = {}

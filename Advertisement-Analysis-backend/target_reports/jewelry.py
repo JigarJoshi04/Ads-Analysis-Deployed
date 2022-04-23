@@ -55,8 +55,7 @@ class TargetReportJewelry:
                         prediction["binary"] = str(all_model.predict(scaled_data)[0])
                         prediction["probability"] = str(
                             round(
-                                max(all_model.predict_proba(scaled_data)[0]) * 100,
-                                2,
+                                max(all_model.predict_proba(scaled_data)[0]) * 100, 2,
                             )
                         )
 

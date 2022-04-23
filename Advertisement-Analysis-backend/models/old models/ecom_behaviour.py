@@ -95,7 +95,7 @@ def getOutput():
                 x = pd.to_datetime(x, format="%Y-%m-%d %H:%M:%S")
             except ValueError:
                 x = int(x)
-                x = x / 10**9
+                x = x / 10 ** 9
                 x = datetime.fromtimestamp(x).strftime("%Y-%m-%d %H:%M:%S.%f")
             return x
         else:

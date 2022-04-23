@@ -26,13 +26,7 @@ class FashionPredicter:
             return 100.00
 
         scaled_data = phone_model_scaler.transform(
-            [
-                [
-                    self.data.get("gender"),
-                    self.data.get("age"),
-                    self.data.get("income"),
-                ]
-            ]
+            [[self.data.get("gender"), self.data.get("age"), self.data.get("income"),]]
         )
 
         prediction = {}
@@ -47,13 +41,7 @@ class FashionPredicter:
             return 100.00
 
         scaled_data = phone_model_scaler.transform(
-            [
-                [
-                    self.data.get("gender"),
-                    self.data.get("age"),
-                    self.data.get("income"),
-                ]
-            ]
+            [[self.data.get("gender"), self.data.get("age"), self.data.get("income"),]]
         )
 
         prediction = {}
@@ -68,13 +56,7 @@ class FashionPredicter:
             return 100.00
 
         scaled_data = phone_model_scaler.transform(
-            [
-                [
-                    self.data.get("gender"),
-                    self.data.get("age"),
-                    self.data.get("income"),
-                ]
-            ]
+            [[self.data.get("gender"), self.data.get("age"), self.data.get("income"),]]
         )
 
         prediction = {}
@@ -89,13 +71,7 @@ class FashionPredicter:
             return 100.00
 
         scaled_data = phone_model_scaler.transform(
-            [
-                [
-                    self.data.get("gender"),
-                    self.data.get("age"),
-                    self.data.get("income"),
-                ]
-            ]
+            [[self.data.get("gender"), self.data.get("age"), self.data.get("income"),]]
         )
 
         prediction = {}
@@ -110,13 +86,7 @@ class FashionPredicter:
             return 100.00
 
         scaled_data = phone_model_scaler.transform(
-            [
-                [
-                    self.data.get("gender"),
-                    self.data.get("age"),
-                    self.data.get("income"),
-                ]
-            ]
+            [[self.data.get("gender"), self.data.get("age"), self.data.get("income"),]]
         )
 
         prediction = {}
@@ -131,13 +101,7 @@ class FashionPredicter:
             return 100.00
 
         scaled_data = phone_model_scaler.transform(
-            [
-                [
-                    self.data.get("gender"),
-                    self.data.get("age"),
-                    self.data.get("income"),
-                ]
-            ]
+            [[self.data.get("gender"), self.data.get("age"), self.data.get("income"),]]
         )
 
         prediction = {}

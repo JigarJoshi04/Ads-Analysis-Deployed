@@ -17,7 +17,9 @@ print(
     "######################################## Vehicle Models Loading ###################################################"
 )
 vehicle_model_scaler = load("models/automobile_model/vehicle_model/scaler.pkl")
-vehicle_model = pickle.load(open("models/automobile_model/vehicle_model/model.sav", "rb"))
+vehicle_model = pickle.load(
+    open("models/automobile_model/vehicle_model/model.sav", "rb")
+)
 print(
     "######################################## Vehicle Models Loaded Successfully ###################################################"
 )
@@ -27,7 +29,9 @@ print(
     "######################################## Bike Models Loading ###################################################"
 )
 bike_model_scaler = load("models/automobile_model/bike_model/scaler_bike.pkl")
-bike_model = pickle.load(open("models/automobile_model/bike_model/model_bike.sav", "rb"))
+bike_model = pickle.load(
+    open("models/automobile_model/bike_model/model_bike.sav", "rb")
+)
 print(
     "######################################## Bike Models Loaded Successfully ###################################################"
 )
