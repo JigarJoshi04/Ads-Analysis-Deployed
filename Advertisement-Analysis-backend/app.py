@@ -107,7 +107,7 @@ if __name__ == "__main__":
     # app.debug = True
     app.run(
         debug=True,
-        ssl_context=("cert/fullchain.pem", "cert/privkey.pem"),
+        # ssl_context=("cert/fullchain.pem", "cert/privkey.pem"),
         host="0.0.0.0",
         port=5000,
     )  # go to https://localhost:5000/ to view the page

@@ -174,6 +174,7 @@ def test_necklace_midrange_negative():
     prediction = jewelry_utilities(data)
     assert float(prediction["binary"]) < 90
 
+
 def test_necklace_premium():
     data = {
         "age": 50,
@@ -230,6 +231,7 @@ def test_necklace_midrange_negative():
     }
     prediction = jewelry_utilities(data)
     assert float(prediction["binary"]) < 90
+
 
 def test_bracelet_premium():
     data = {
@@ -288,6 +290,7 @@ def test_bracelet_midrange_negative():
     prediction = jewelry_utilities(data)
     assert float(prediction["binary"]) < 90
 
+
 def test_menscollection_premium():
     data = {
         "age": 30,
@@ -344,4 +347,3 @@ def test_menscollection_midrange_negative():
     }
     prediction = jewelry_utilities(data)
     assert float(prediction["binary"]) < 90
-
