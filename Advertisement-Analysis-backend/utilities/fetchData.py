@@ -27,7 +27,7 @@ def genderData(mydb, productName, quality):
         return genderList
 
 
-def ageData(mydb, productName, quality):
+def ageData(mydb, productName, quality, purchased):
     collist = mydb.list_collection_names()
     print(collist)
     if productName in collist:
@@ -35,7 +35,7 @@ def ageData(mydb, productName, quality):
         print("The collection exists.")
         age = mydb[productName].aggregate(
             [
-                {"$match": {"$and": [{"quality": quality}, {"purchased": 1}]}},
+                {"$match": {"$and": [{"quality": quality}, {"purchased": purchased}]}},
                 {
                     "$group": {
                         "_id": {
@@ -266,6 +266,27 @@ def makeIncomeData(purchasedList, notPurchasedList, quality):
     return listData
 
 
+def makeAgeData(purchasedList, notPurchasedList):
+    purchasedList.sort()
+    notPurchasedList.sort()
+    purchasedData = []
+    notPurchasedData = []
+    labels = []
+    for i in purchasedList:
+        labels.append(i[0])
+        purchasedData.append(i[1])
+
+    for i in notPurchasedList:
+        notPurchasedData.append(i[1])
+
+    listData = {
+        "labels": labels,
+        "purchasedData": purchasedData,
+        "notPurchasedData": notPurchasedData,
+    }
+    return listData
+
+
 def makeDict(arrayList):
     arrayList.sort()
     data = []
@@ -290,7 +311,8 @@ def connection(productName, quality):
     mydb = myclient[connection["db"]]
 
     genderList = genderData(mydb, productName, quality)
-    ageList = ageData(mydb, productName, quality)
+    purchasedAgeList = ageData(mydb, productName, quality, 1)
+    notPurchasedAgeList = ageData(mydb, productName, quality, 0)
     purchasedIncomeList = incomeData(mydb, productName, quality, 1)
     notPurchasedIncomeList = incomeData(mydb, productName, quality, 0)
     educationList = educationData(mydb, productName, quality)
@@ -299,7 +321,7 @@ def connection(productName, quality):
         "product": productName,
         "cost": quality,
         "genderList": makeDict(genderList),
-        "ageList": makeDict(ageList),
+        "ageList": makeAgeData(purchasedAgeList, notPurchasedAgeList),
         "incomeList": makeIncomeData(
             purchasedIncomeList, notPurchasedIncomeList, quality
         ),
