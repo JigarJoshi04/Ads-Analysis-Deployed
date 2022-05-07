@@ -5,6 +5,8 @@ import ssl
 from target_reports.automobile import TargetReportAutomobile
 from target_reports.jewelry import TargetReportJewelry
 from utilities.fetchData import connection
+import pymongo
+import json
 
 from utilities.utils import (
     TweakPadResultData,
@@ -18,6 +20,12 @@ from utilities.model_graph import model_graph
 model_premium_phone = None
 app = Flask(__name__)
 CORS(app)
+
+with open("config.json") as f:
+    data = json.load(f)
+connection = data["connection"][0]
+myclient = pymongo.MongoClient(connection["host"])
+mydb = myclient[connection["db"]]
 
 
 @app.route("/user_behavior")
@@ -71,7 +79,7 @@ def fetch_data():
     data = request.get_json()
     productName = data["product"].lower()
     quality = 1 if data["cost"] == "Premium" else 0
-    dictData = connection(productName, quality)
+    dictData = connection(productName, quality, mydb)
     return jsonify(dictData)
 
 
