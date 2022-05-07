@@ -302,7 +302,14 @@ def makeDict(arrayList):
     return listData
 
 
-def connection(productName, quality, mydb):
+def connection(productName, quality):
+    with open(FILEPATH) as f:
+        data = json.load(f)
+    connection = data["connection"][0]
+    myclient = pymongo.MongoClient(connection["host"])
+
+    mydb = myclient[connection["db"]]
+
     genderList = genderData(mydb, productName, quality)
     purchasedAgeList = ageData(mydb, productName, quality, 1)
     notPurchasedAgeList = ageData(mydb, productName, quality, 0)
