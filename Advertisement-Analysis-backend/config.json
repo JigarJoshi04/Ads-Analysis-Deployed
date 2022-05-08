@@ -1,8 +1,8 @@
 {
     "connection": [
         {
-            "host" : "mongodb+srv://anchaljain007:jigarjoshi@mydatacollection.snfkk.mongodb.net/MyDataCollection?retryWrites=true&w=majority",
-            "db": "test"
+            "host" : "mongodb://localhost:27017/",
+            "db": "MyDataCollection"
         }
     ]
 }

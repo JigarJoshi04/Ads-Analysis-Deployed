@@ -102,7 +102,7 @@ def modelGraph():
 
 
 if __name__ == "__main__":
-    context = ssl.SSLContext()
+    # context = ssl.SSLContext()
     # context.load_cert_chain("cert/fullchain.pem", "cert/privkey.pem")
     # app.debug = True
     app.run(

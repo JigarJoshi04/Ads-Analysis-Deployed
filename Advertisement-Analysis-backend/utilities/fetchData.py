@@ -310,6 +310,7 @@ def connection(productName, quality):
 
     mydb = myclient[connection["db"]]
 
+    
     genderList = genderData(mydb, productName, quality)
     purchasedAgeList = ageData(mydb, productName, quality, 1)
     notPurchasedAgeList = ageData(mydb, productName, quality, 0)
@@ -332,6 +333,6 @@ def connection(productName, quality):
     return dictData
 
 
-# #driver code
+#driver code
 # if __name__ == "__main__" :
 #     connection('ring', 1)
