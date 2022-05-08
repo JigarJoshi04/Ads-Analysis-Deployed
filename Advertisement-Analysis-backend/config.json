@@ -1,7 +1,7 @@
 {
     "connection": [
         {
-            "host" : "mongodb+srv://anchaljain007:jigarjoshi@mydatacollection.snfkk.mongodb.net/MyDataCollection?retryWrites=true&w=majority",
+            "host" : "testuser:testpassword@mydatacollection.snfkk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
             "db": "test"
         }
     ]
